@@ -2,7 +2,6 @@
 var list = [];
 
 function addTodo(event){
-    console.log("Added");
     event.preventDefault();
     var inputForTodo = document.getElementsByClassName("newTodo form-control")[0];
     var newList = returnNewDivElementWithTodo(inputForTodo.value);
@@ -12,7 +11,6 @@ function addTodo(event){
     list.push("todoList"+size.toString());
     var lista = document.getElementById("container");
     inputForTodo.value = "";
-    console.log(lista);
     lista.appendChild(newList);
 }
 
@@ -57,7 +55,6 @@ function rem(event){
 }
 
 function main(){
-    console.log("HELLO");
     var postTodo = document.getElementById("postB");
     postTodo.addEventListener("click", addTodo);
 
